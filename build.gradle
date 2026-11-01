@@ -27,7 +27,18 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    // Curse Maven: hosts Dye Depot (CurseForge project 988504)
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+        content { includeGroup "curse.maven" }
+    }
+    // BlameJared Maven: hosts JEI
+    maven {
+        name = "BlameJared"
+        url = "https://maven.blamejared.com/"
+        content { includeGroup "mezz.jei" }
+    }
 }
 
 base {
@@ -116,12 +127,14 @@ configurations {
 }
 
 dependencies {
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    // Dye Depot (required): needed at compile time and at runtime, and declared as a required dependency in neoforge.mods.toml
+    implementation "curse.maven:dye-depot-988504:${dye_depot_file_id}"
+
+    // JEI (optional): the API is compile-only, and the full JEI jar is only used in dev runs.
+    // localRuntime keeps JEI out of the published dependencies.
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
@@ -151,6 +164,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_name               : mod_name,
             mod_license            : mod_license,
             mod_version            : mod_version,
+            dye_depot_version_range: dye_depot_version_range,
+            jei_version_range      : jei_version_range,
     ]
     inputs.properties replaceProperties
     expand replaceProperties

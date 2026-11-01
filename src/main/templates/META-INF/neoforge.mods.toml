@@ -36,17 +36,17 @@ displayName="${mod_name}" #mandatory
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
+#logoFile="dd_spectrum.png" #optional
 
 # A text field displayed in the mod UI
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="unesessary_guide"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+Dye Depot: Spectrum++ expands Dye Depot's 32 dyes to 140, organized into 15 color families with 9 variants each, plus a Key row of neutrals.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
@@ -85,6 +85,23 @@ Example mod description.
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+
+# Dye Depot is required: Spectrum++ builds on its dyes
+[[dependencies.${mod_id}]]
+    modId="dye_depot"
+    type="required"
+    reason="Spectrum++ extends Dye Depot's dyes"
+    versionRange="${dye_depot_version_range}"
+    ordering="AFTER"
+    side="BOTH"
+
+# JEI is optional: recipe and dye display integration
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="${jei_version_range}"
+    ordering="NONE"
+    side="CLIENT"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't

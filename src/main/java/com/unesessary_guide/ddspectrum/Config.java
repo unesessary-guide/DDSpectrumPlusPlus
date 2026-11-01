@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.unesessary_guide.ddspectrum;
 
 import java.util.List;
 import java.util.Set;
