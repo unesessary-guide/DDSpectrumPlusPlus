@@ -1,0 +1,16 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_magenta_dye",
+    "dd_spectrum:neon_magenta_dye",
+    "dd_spectrum:rich_magenta_dye",
+    "dd_spectrum:light_magenta_dye",
+    {
+      "id": "minecraft:magenta_dye",
+      "required": false
+    },
+    "dd_spectrum:dark_magenta_dye",
+    "dd_spectrum:pastel_magenta_dye",
+    "dd_spectrum:muted_magenta_dye",
+    "dd_spectrum:murky_magenta_dye"
+  ]
+}

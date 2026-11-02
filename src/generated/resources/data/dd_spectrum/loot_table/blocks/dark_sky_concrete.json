@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dd_spectrum:dark_sky_concrete"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dd_spectrum:blocks/dark_sky_concrete"
+}

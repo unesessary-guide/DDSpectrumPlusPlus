@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_sapphire_dye",
+    "dd_spectrum:neon_sapphire_dye",
+    "dd_spectrum:rich_sapphire_dye",
+    "dd_spectrum:light_sapphire_dye",
+    "dd_spectrum:sapphire_dye",
+    "dd_spectrum:dark_sapphire_dye",
+    "dd_spectrum:pastel_sapphire_dye",
+    {
+      "id": "dye_depot:slate_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:navy_dye",
+      "required": false
+    }
+  ]
+}

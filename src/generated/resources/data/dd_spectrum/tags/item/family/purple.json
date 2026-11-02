@@ -1,0 +1,16 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_purple_dye",
+    "dd_spectrum:neon_purple_dye",
+    "dd_spectrum:rich_purple_dye",
+    "dd_spectrum:light_purple_dye",
+    {
+      "id": "minecraft:purple_dye",
+      "required": false
+    },
+    "dd_spectrum:dark_purple_dye",
+    "dd_spectrum:pastel_purple_dye",
+    "dd_spectrum:muted_purple_dye",
+    "dd_spectrum:murky_purple_dye"
+  ]
+}

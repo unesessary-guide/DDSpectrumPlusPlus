@@ -1,0 +1,22 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_lime_dye",
+    "dd_spectrum:neon_lime_dye",
+    "dd_spectrum:rich_lime_dye",
+    "dd_spectrum:light_lime_dye",
+    {
+      "id": "minecraft:lime_dye",
+      "required": false
+    },
+    {
+      "id": "minecraft:green_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_lime_dye",
+    "dd_spectrum:muted_lime_dye",
+    {
+      "id": "dye_depot:olive_dye",
+      "required": false
+    }
+  ]
+}

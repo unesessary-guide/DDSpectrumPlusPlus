@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dd_spectrum:item/dye/pastel_rose_dye"
+  }
+}

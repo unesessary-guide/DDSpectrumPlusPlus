@@ -1,0 +1,28 @@
+{
+  "values": [
+    "dd_spectrum:murky_red_dye",
+    {
+      "id": "minecraft:brown_dye",
+      "required": false
+    },
+    "dd_spectrum:murky_yellow_dye",
+    {
+      "id": "dye_depot:olive_dye",
+      "required": false
+    },
+    "dd_spectrum:murky_forest_dye",
+    "dd_spectrum:murky_mint_dye",
+    "dd_spectrum:murky_cyan_dye",
+    "dd_spectrum:murky_sky_dye",
+    {
+      "id": "dye_depot:navy_dye",
+      "required": false
+    },
+    "dd_spectrum:murky_blue_dye",
+    "dd_spectrum:murky_violet_dye",
+    "dd_spectrum:murky_purple_dye",
+    "dd_spectrum:murky_magenta_dye",
+    "dd_spectrum:murky_fuchsia_dye",
+    "dd_spectrum:murky_rose_dye"
+  ]
+}

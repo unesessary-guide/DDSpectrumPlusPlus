@@ -1,0 +1,19 @@
+{
+  "values": [
+    {
+      "id": "dye_depot:aqua_dye",
+      "required": false
+    },
+    "dd_spectrum:neon_cyan_dye",
+    "dd_spectrum:rich_cyan_dye",
+    "dd_spectrum:light_cyan_dye",
+    {
+      "id": "minecraft:cyan_dye",
+      "required": false
+    },
+    "dd_spectrum:dark_cyan_dye",
+    "dd_spectrum:pastel_cyan_dye",
+    "dd_spectrum:muted_cyan_dye",
+    "dd_spectrum:murky_cyan_dye"
+  ]
+}

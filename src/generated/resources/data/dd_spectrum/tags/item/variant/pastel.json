@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:pastel_red_dye",
+    "dd_spectrum:pastel_orange_dye",
+    "dd_spectrum:pastel_yellow_dye",
+    "dd_spectrum:pastel_lime_dye",
+    "dd_spectrum:pastel_forest_dye",
+    "dd_spectrum:pastel_mint_dye",
+    "dd_spectrum:pastel_cyan_dye",
+    "dd_spectrum:pastel_sky_dye",
+    "dd_spectrum:pastel_sapphire_dye",
+    "dd_spectrum:pastel_blue_dye",
+    "dd_spectrum:pastel_violet_dye",
+    "dd_spectrum:pastel_purple_dye",
+    "dd_spectrum:pastel_magenta_dye",
+    "dd_spectrum:pastel_fuchsia_dye",
+    "dd_spectrum:pastel_rose_dye"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dd_spectrum:block/wool/vibrant_sky_wool"
+  }
+}

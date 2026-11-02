@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:rich_red_dye",
+    "dd_spectrum:rich_orange_dye",
+    "dd_spectrum:rich_yellow_dye",
+    "dd_spectrum:rich_lime_dye",
+    "dd_spectrum:rich_forest_dye",
+    "dd_spectrum:rich_mint_dye",
+    "dd_spectrum:rich_cyan_dye",
+    "dd_spectrum:rich_sky_dye",
+    "dd_spectrum:rich_sapphire_dye",
+    "dd_spectrum:rich_blue_dye",
+    "dd_spectrum:rich_violet_dye",
+    "dd_spectrum:rich_purple_dye",
+    "dd_spectrum:rich_magenta_dye",
+    "dd_spectrum:rich_fuchsia_dye",
+    "dd_spectrum:rich_rose_dye"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_forest_dye",
+    "dd_spectrum:neon_forest_dye",
+    "dd_spectrum:rich_forest_dye",
+    "dd_spectrum:light_forest_dye",
+    {
+      "id": "dye_depot:forest_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:verdant_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_forest_dye",
+    "dd_spectrum:muted_forest_dye",
+    "dd_spectrum:murky_forest_dye"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:neon_red_dye",
+    "dd_spectrum:neon_orange_dye",
+    "dd_spectrum:neon_yellow_dye",
+    "dd_spectrum:neon_lime_dye",
+    "dd_spectrum:neon_forest_dye",
+    "dd_spectrum:neon_mint_dye",
+    "dd_spectrum:neon_cyan_dye",
+    "dd_spectrum:neon_sky_dye",
+    "dd_spectrum:neon_sapphire_dye",
+    "dd_spectrum:neon_blue_dye",
+    "dd_spectrum:neon_violet_dye",
+    "dd_spectrum:neon_purple_dye",
+    "dd_spectrum:neon_magenta_dye",
+    "dd_spectrum:neon_fuchsia_dye",
+    "dd_spectrum:neon_rose_dye"
+  ]
+}
