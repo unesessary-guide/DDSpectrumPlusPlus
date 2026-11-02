@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_rose_dye",
+    "dd_spectrum:neon_rose_dye",
+    "dd_spectrum:rich_rose_dye",
+    {
+      "id": "minecraft:pink_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:rose_dye",
+      "required": false
+    },
+    "dd_spectrum:dark_rose_dye",
+    "dd_spectrum:pastel_rose_dye",
+    "dd_spectrum:muted_rose_dye",
+    "dd_spectrum:murky_rose_dye"
+  ]
+}

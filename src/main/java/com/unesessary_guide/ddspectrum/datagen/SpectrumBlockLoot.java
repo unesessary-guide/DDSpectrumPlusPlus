@@ -28,6 +28,7 @@ public class SpectrumBlockLoot extends BlockLootSubProvider {
                 }
             }
         }
+        ModBlocks.baskets().forEach(basket -> dropSelf(basket.get()));
     }
 
     @Override

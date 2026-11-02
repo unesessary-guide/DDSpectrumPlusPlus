@@ -1,0 +1,16 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_blue_dye",
+    "dd_spectrum:neon_blue_dye",
+    "dd_spectrum:rich_blue_dye",
+    "dd_spectrum:light_blue_dye",
+    {
+      "id": "minecraft:blue_dye",
+      "required": false
+    },
+    "dd_spectrum:dark_blue_dye",
+    "dd_spectrum:pastel_blue_dye",
+    "dd_spectrum:muted_blue_dye",
+    "dd_spectrum:murky_blue_dye"
+  ]
+}

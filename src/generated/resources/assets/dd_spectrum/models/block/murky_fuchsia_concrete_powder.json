@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dd_spectrum:block/concrete_powder/murky_fuchsia_concrete_powder"
+  }
+}

@@ -25,6 +25,7 @@ public class SpectrumLanguageProvider extends LanguageProvider {
             for (SpectrumBlockType type : SpectrumBlockType.values()) {
                 addBlock(ModBlocks.block(type, dye), dye.name() + " " + type.displayName());
             }
+            addBlock(ModBlocks.basket(dye), dye.name() + " Dye Basket");
         });
 
         // Config screen

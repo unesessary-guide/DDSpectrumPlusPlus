@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import com.unesessary_guide.ddspectrum.DDSpectrum;
+import com.unesessary_guide.ddspectrum.block.DyeBasketBlock;
 import com.unesessary_guide.ddspectrum.dye.SpectrumDye;
 import com.unesessary_guide.ddspectrum.dye.SpectrumDyes;
 
@@ -24,7 +25,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * Registers every block type for each of the 108 new dyes (6 x 108 = 648 blocks) plus their block items.
+ * Registers every block type for each of the 108 new dyes (6 x 108 = 648 blocks), plus a dye basket for each dye
+ * (108 more), and all their block items.
  * Properties are copied from vanilla's white block of the same type, so hardness, sounds, tool requirements and
  * the like match vanilla. Only the map color changes.
  */
@@ -34,6 +36,9 @@ public final class ModBlocks {
     private static final Map<SpectrumBlockType, Map<String, DeferredBlock<Block>>> BY_TYPE =
             new EnumMap<>(SpectrumBlockType.class);
 
+    /** Dye baskets, keyed by dye id. They are not a SpectrumBlockType: they have their own block class and recipe. */
+    private static final Map<String, DeferredBlock<Block>> BASKETS = new LinkedHashMap<>();
+
     static {
         for (SpectrumBlockType type : SpectrumBlockType.values()) {
             BY_TYPE.put(type, new LinkedHashMap<>());
@@ -42,6 +47,7 @@ public final class ModBlocks {
             for (SpectrumBlockType type : SpectrumBlockType.values()) {
                 register(type, dye);
             }
+            registerBasket(dye);
         });
     }
 
@@ -66,6 +72,14 @@ public final class ModBlocks {
         ModItems.ITEMS.registerSimpleBlockItem(block);
     }
 
+    private static void registerBasket(SpectrumDye dye) {
+        MapColor mapColor = SpectrumMapColors.nearest(dye.color());
+        DeferredBlock<Block> basket = BLOCKS.register(dye.id() + "_dye_basket",
+                () -> new DyeBasketBlock(dye.color(), props(Blocks.WHITE_WOOL, mapColor)));
+        BASKETS.put(dye.id(), basket);
+        ModItems.ITEMS.registerSimpleBlockItem(basket);
+    }
+
     private static BlockBehaviour.Properties props(Block vanillaWhite, MapColor mapColor) {
         return BlockBehaviour.Properties.ofFullCopy(vanillaWhite).mapColor(mapColor);
     }
@@ -83,8 +97,22 @@ public final class ModBlocks {
         return Collections.unmodifiableCollection(BY_TYPE.get(type).values());
     }
 
+    /** The dye basket for a new dye. Throws if the dye is an anchor. */
+    public static DeferredBlock<Block> basket(SpectrumDye dye) {
+        DeferredBlock<Block> basket = BASKETS.get(dye.id());
+        if (basket == null) {
+            throw new IllegalArgumentException(dye.id() + " is an anchor dye and has no Spectrum++ dye basket");
+        }
+        return basket;
+    }
+
+    public static Collection<DeferredBlock<Block>> baskets() {
+        return Collections.unmodifiableCollection(BASKETS.values());
+    }
+
+    /** Every block Spectrum++ registers: all block types plus the dye baskets. */
     public static Stream<DeferredBlock<Block>> allBlocks() {
-        return BY_TYPE.values().stream().flatMap(m -> m.values().stream());
+        return Stream.concat(BY_TYPE.values().stream().flatMap(m -> m.values().stream()), BASKETS.values().stream());
     }
 
     /** Wool burns like vanilla wool (spread 30, flammability 60). Call from common setup, inside enqueueWork. */

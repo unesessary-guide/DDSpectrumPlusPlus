@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dd_spectrum:block/muted_mint_dye_basket",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dd_spectrum:block/muted_mint_dye_basket"
+    },
+    "facing=south": {
+      "model": "dd_spectrum:block/muted_mint_dye_basket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dd_spectrum:block/muted_mint_dye_basket",
+      "y": 270
+    }
+  }
+}

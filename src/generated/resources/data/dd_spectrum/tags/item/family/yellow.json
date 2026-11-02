@@ -1,0 +1,22 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_yellow_dye",
+    "dd_spectrum:neon_yellow_dye",
+    "dd_spectrum:rich_yellow_dye",
+    "dd_spectrum:light_yellow_dye",
+    {
+      "id": "minecraft:yellow_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:amber_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_yellow_dye",
+    {
+      "id": "dye_depot:beige_dye",
+      "required": false
+    },
+    "dd_spectrum:murky_yellow_dye"
+  ]
+}

@@ -13,6 +13,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -42,6 +43,7 @@ public class SpectrumBlockStateProvider extends BlockStateProvider {
             for (SpectrumBlockType type : SpectrumBlockType.values()) {
                 generate(type, dye);
             }
+            generateBasket(dye);
         });
     }
 
@@ -61,6 +63,39 @@ public class SpectrumBlockStateProvider extends BlockStateProvider {
             case STAINED_GLASS -> simpleBlockWithItem(block, models().cubeAll(name, texture).renderType("translucent"));
             default -> simpleBlockWithItem(block, models().cubeAll(name, texture));
         }
+    }
+
+    /**
+     * A full 16 x 16 x 16 cube using one texture on every face, at textures/block/dye_basket/{dye}_dye_basket.png
+     * (a plain solid color). Shading and ambient occlusion are switched off, so every face is the same pure color.
+     * If that texture is missing, the basket borrows the dye's wool texture.
+     */
+    private void generateBasket(SpectrumDye dye) {
+        Block block = ModBlocks.basket(dye).get();
+        String name = dye.id() + "_dye_basket";
+        ResourceLocation texture = basketTexture(dye, name);
+
+        BlockModelBuilder model = models().getBuilder(name)
+                .parent(new ModelFile.UncheckedModelFile(ResourceLocation.withDefaultNamespace("block/block")))
+                .texture("particle", texture)
+                .texture("all", texture)
+                .ao(false);
+        model.element().from(0, 0, 0).to(16, 16, 16).shade(false)
+                .allFaces((direction, face) -> face.texture("#all").cullface(direction)).end();
+
+        horizontalBlock(block, model, 180);
+        simpleBlockItem(block, model);
+    }
+
+    private ResourceLocation basketTexture(SpectrumDye dye, String name) {
+        for (String path : List.of("block/dye_basket/" + name, "block/dye_basket/" + dye.id(), "block/" + name)) {
+            ResourceLocation candidate = ResourceLocation.fromNamespaceAndPath(DDSpectrum.MODID, path);
+            if (helper.exists(candidate, TEXTURE)) {
+                return candidate;
+            }
+        }
+        DDSpectrum.LOGGER.warn("No dye basket texture for {}, using its wool texture as a stand-in", name);
+        return texture(SpectrumBlockType.WOOL, dye, dye.id() + "_wool");
     }
 
     private ResourceLocation texture(SpectrumBlockType type, SpectrumDye dye, String name) {

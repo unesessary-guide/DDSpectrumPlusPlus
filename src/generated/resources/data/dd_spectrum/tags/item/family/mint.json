@@ -1,0 +1,19 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_mint_dye",
+    "dd_spectrum:neon_mint_dye",
+    "dd_spectrum:rich_mint_dye",
+    "dd_spectrum:light_mint_dye",
+    {
+      "id": "dye_depot:mint_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:teal_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_mint_dye",
+    "dd_spectrum:muted_mint_dye",
+    "dd_spectrum:murky_mint_dye"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_red_dye",
+    "dd_spectrum:neon_red_dye",
+    "dd_spectrum:rich_red_dye",
+    {
+      "id": "dye_depot:coral_dye",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:maroon_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_red_dye",
+    "dd_spectrum:muted_red_dye",
+    "dd_spectrum:murky_red_dye"
+  ]
+}

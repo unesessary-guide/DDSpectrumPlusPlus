@@ -1,0 +1,25 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_orange_dye",
+    "dd_spectrum:neon_orange_dye",
+    "dd_spectrum:rich_orange_dye",
+    "dd_spectrum:light_orange_dye",
+    {
+      "id": "minecraft:orange_dye",
+      "required": false
+    },
+    {
+      "id": "dye_depot:ginger_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_orange_dye",
+    {
+      "id": "dye_depot:tan_dye",
+      "required": false
+    },
+    {
+      "id": "minecraft:brown_dye",
+      "required": false
+    }
+  ]
+}

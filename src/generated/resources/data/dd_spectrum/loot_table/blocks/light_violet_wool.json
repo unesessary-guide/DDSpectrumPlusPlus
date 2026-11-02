@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dd_spectrum:light_violet_wool"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dd_spectrum:blocks/light_violet_wool"
+}

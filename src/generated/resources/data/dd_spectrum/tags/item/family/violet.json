@@ -1,0 +1,16 @@
+{
+  "values": [
+    "dd_spectrum:vibrant_violet_dye",
+    "dd_spectrum:neon_violet_dye",
+    "dd_spectrum:rich_violet_dye",
+    "dd_spectrum:light_violet_dye",
+    "dd_spectrum:violet_dye",
+    {
+      "id": "dye_depot:indigo_dye",
+      "required": false
+    },
+    "dd_spectrum:pastel_violet_dye",
+    "dd_spectrum:muted_violet_dye",
+    "dd_spectrum:murky_violet_dye"
+  ]
+}
